@@ -12,7 +12,7 @@ CREATE TABLE users (
 
 CREATE TABLE properties (
   id SERIAL PRIMARY KEY NOT NULL,
-  owner INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   title VARCHAR(255),
   description TEXT,
   cost_per_night INTEGER,
